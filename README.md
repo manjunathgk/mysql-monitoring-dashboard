@@ -56,19 +56,8 @@ You should then configure the MySQL plugin:
 ## MySQL Metrics and Status 
 For more info on collected metrices and statuses, please see https://github.com/chrisboulton/collectd-python-mysql 
 
-### Query Response Times
 
-For versions of MySQL with support for it and where enabled, `INFORMATION_SCHEMA.QUERY_RESPONSE_TIME` will be queried for metrics to generate a histogram of query response times.
-
-[Additional information on response time histograms in Percona Server](http://www.percona.com/blog/2010/07/11/query-response-time-histogram-new-feature-in-percona-server/)
-
-    response_time_total.1
-    response_time_count.1
-    ...
-    response_time_total.14
-    response_time_count.14
-
-### Added support for PERFORMANCE_SCHEMA metrics
+### Support for PERFORMANCE_SCHEMA metrics
 If Performance_schema is enabled you will get the following metrics as well.
 
     Number of connections per Account (host-user) - Total and current

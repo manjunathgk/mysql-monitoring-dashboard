@@ -21,6 +21,9 @@
 #
 # Author: Chris Boulton <chris@chrisboulton.com>
 # License: MIT (http://www.opensource.org/licenses/mit-license.php)
+#################################################################################3
+# Author: Manjunath Gouda
+# Updated for MySQL 5.6 and set MySQL host as CollectD host
 #
 
 import collectd
@@ -840,7 +843,7 @@ def dispatch_value(prefix, key, value, type, type_instance=None):
 	val.type          = type
 	val.type_instance = type_instance
 	val.values        = [value]
-    val.host          = MYSQL_CONFIG['Host']
+        val.host          = MYSQL_CONFIG['Host']
 	val.dispatch()
 
 def configure_callback(conf):
@@ -899,18 +902,18 @@ def read_callback():
 		dispatch_value('innodb', key, innodb_status[key], MYSQL_INNODB_STATUS_VARS[key])
 
         # Performance_Schema metrics
-        if is_ps_enabled(conn):
-                queries = fetch_slow_queries(conn)
-                for key in queries:
-                        dispatch_value('slow_query', key, queries[key], 'counter')
+#        if is_ps_enabled(conn):
+#                queries = fetch_slow_queries(conn)
+#                for key in queries:
+#                        dispatch_value('slow_query', key, queries[key], 'counter')
 
-                queries = fetch_slow_queries_excluding_table_names(conn)
-                for key in queries:
-                        dispatch_value('slow_query_excluding_table_names', "{}-{}".format(binascii.crc32(key) % 100, key) , queries[key], 'counter')
+#                queries = fetch_slow_queries_excluding_table_names(conn)
+#                for key in queries:
+#                        dispatch_value('slow_query_excluding_table_names', "{}-{}".format(binascii.crc32(key) % 100, key) , queries[key], 'counter')
         
-                queries = fetch_warning_error_queries(conn)
-                for key in queries:
-                        dispatch_value('warn_err_query', key, queries[key], 'counter')
+#                queries = fetch_warning_error_queries(conn)
+#                for key in queries:
+#                        dispatch_value('warn_err_query', key, queries[key], 'counter')
         
 #                queries = fetch_indexes_not_being_used(conn)
 #                for key in queries:
@@ -920,17 +923,17 @@ def read_callback():
 #               for key in queries:
 #                       dispatch_value('number_of_reads_per_index', key, queries[key], 'gauge')
 
-                queries=fetch_connections_per_user(conn)
-                for key in queries:
-                        dispatch_value('connections_per_user', key, queries[key], 'gauge')
+#                queries=fetch_connections_per_user(conn)
+#                for key in queries:
+#                        dispatch_value('connections_per_user', key, queries[key], 'gauge')
 
-                queries=fetch_connections_per_host(conn)
-                for key in queries:
-                        dispatch_value('connections_per_host', key, queries[key], 'gauge')
+#                queries=fetch_connections_per_host(conn)
+#                for key in queries:
+#                        dispatch_value('connections_per_host', key, queries[key], 'gauge')
 
-                queries=fetch_connections_per_account(conn)
-                for key in queries:
-                        dispatch_value('connections_per_account', key, queries[key], 'gauge')
+#                queries=fetch_connections_per_account(conn)
+#                for key in queries:
+#                        dispatch_value('connections_per_account', key, queries[key], 'gauge')
 
 
 collectd.register_read(read_callback)

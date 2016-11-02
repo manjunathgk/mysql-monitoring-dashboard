@@ -53,9 +53,9 @@ You should then configure the MySQL plugin:
 	</Python>
  
 
-## For more info collected MySQL Metrics and Statuses, please see https://github.com/chrisboulton/collectd-python-mysql 
+## MySQL Metrics and Status 
+For more info on collected metrices and statuses, please see https://github.com/chrisboulton/collectd-python-mysql 
 
- 
 ### Query Response Times
 
 For versions of MySQL with support for it and where enabled, `INFORMATION_SCHEMA.QUERY_RESPONSE_TIME` will be queried for metrics to generate a histogram of query response times.

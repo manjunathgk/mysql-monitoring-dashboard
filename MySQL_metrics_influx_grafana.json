@@ -2878,7 +2878,7 @@
     }
   ],
   "time": {
-    "from": "now-3h",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {
@@ -2928,7 +2928,7 @@
   },
   "refresh": "1m",
   "schemaVersion": 12,
-  "version": 29,
+  "version": 31,
   "links": [],
   "gnetId": null
 }

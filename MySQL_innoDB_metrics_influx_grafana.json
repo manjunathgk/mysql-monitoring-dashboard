@@ -233,7 +233,7 @@
           "height": "110",
           "hideTimeOverride": true,
           "id": 37,
-          "interval": null,
+          "interval": "> 1m",
           "isNew": true,
           "links": [],
           "mappingType": 1,
@@ -345,7 +345,7 @@
           "height": "130px",
           "hideTimeOverride": false,
           "id": 2,
-          "interval": null,
+          "interval": "> 1m",
           "isNew": true,
           "links": [],
           "mappingType": 1,
@@ -449,6 +449,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 24,
+          "interval": ">  1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -676,6 +677,7 @@
           },
           "height": "",
           "id": 4,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -875,6 +877,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 25,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -1098,6 +1101,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 32,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -1207,6 +1211,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 31,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -1324,6 +1329,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 36,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -1471,6 +1477,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 35,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -1580,6 +1587,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 34,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "avg": true,
@@ -1696,6 +1704,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 26,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -1843,6 +1852,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 27,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -2371,6 +2381,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 33,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -2518,6 +2529,7 @@
             "threshold2Color": "rgba(234, 112, 112, 0.22)"
           },
           "id": 30,
+          "interval": "> 1m",
           "isNew": true,
           "legend": {
             "alignAsTable": true,
@@ -2733,7 +2745,7 @@
     }
   ],
   "time": {
-    "from": "now/d",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -2844,7 +2856,7 @@
   },
   "refresh": "1m",
   "schemaVersion": 12,
-  "version": 14,
+  "version": 31,
   "links": [],
   "gnetId": 564
 }
